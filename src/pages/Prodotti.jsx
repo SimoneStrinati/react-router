@@ -16,27 +16,33 @@ function Prodotti() {
             setProdotti(res.data);
 
         }).catch(error => {
-                console.log("C'è un problema", error.message);
-            })
+            console.log("C'è un problema", error.message);
+        })
     };
 
 
     useEffect(getData, []);
 
 
-    return <div className='flex-container flex-wrap'>
-        {prodotti.map((prodotto, i) =>
+    return <>
 
-            <div className="card" key={i}>
+        <h1>Prodotti</h1>
 
-                <h2> {prodotto.title}</h2>
-                <img className="image" src={prodotto.image} alt="" />
-                <p className='descriptionProduct'>{prodotto.description}</p>
+        <div id='prodotti' className='flex-container flex-wrap'>
 
-            </div>
-        )}
+            {prodotti.map((prodotto, i) =>
+                <div className="card" key={i}>
 
-    </div>
+                    <h2> {prodotto.title}</h2>
+                    <img className="image" src={prodotto.image} alt="" />
+                    <p className='descriptionProduct'>{prodotto.description}</p>
+
+                </div>
+            )}
+
+        </div>
+
+    </>
 }
 
 export default Prodotti;

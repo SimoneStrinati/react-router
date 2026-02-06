@@ -1,5 +1,5 @@
 function ChiSiamo () {
-    return <div>Chi Siamo</div>
+    return <h1 id="chisiamo">Chi Siamo</h1>
 }
 
 export default ChiSiamo;
