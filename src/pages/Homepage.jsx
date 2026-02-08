@@ -1,5 +1,10 @@
-function HomePage () {
-    return <h1 id="homepage">Homepage</h1>
+function HomePage() {
+    return <div id="homepage">
+
+        <h1>Homepage</h1>
+        <p>Benvenuto nel Nostro e-commerce</p>
+    </div>
+
 }
 
 export default HomePage;
