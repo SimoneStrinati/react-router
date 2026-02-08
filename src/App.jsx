@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Navbar from './components/navbar';
+import DefaultLayout from './layouts/DefautlLayout';
 
 import HomePage from "./pages/Homepage";
 import ChiSiamo from './pages/ChiSiamo';
@@ -11,11 +11,12 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <Navbar />
         <Routes>
-          <Route path='/' Component={HomePage} />
-          <Route path='/prodotti' Component={Prodotti} />
-          <Route path='/chisiamo' Component={ChiSiamo} />
+          <Route Component={DefaultLayout}>
+            <Route path='/' Component={HomePage} />
+            <Route path='/prodotti' Component={Prodotti} />
+            <Route path='/chisiamo' Component={ChiSiamo} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
