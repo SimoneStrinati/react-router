@@ -1,10 +1,10 @@
-import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import DefaultLayout from './layouts/DefautlLayout';
+
 
 import HomePage from "./pages/Homepage";
 import ChiSiamo from './pages/ChiSiamo';
 import Prodotti from './pages/Prodotti';
+import DefaultLayout from './layouts/DefautlLayout';
 
 function App() {
 
