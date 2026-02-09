@@ -20,7 +20,7 @@ function ProductDetailPage() {
         })
     };
 
-    useEffect(getData, []);
+    useEffect(getData, [id]);
 
     return <div id="product-details">
         <h1>{details.title}</h1>
@@ -32,6 +32,7 @@ function ProductDetailPage() {
             <p>{details.category} </p>
 
             <Link to={`/prodotti/`} className='link'> Torna alla lista prodotti </Link>
+            <Link to={`/prodotti/${parseInt(id) + 1}`} className='link'> Torna al prossimo prodotto </Link>
         </div>
 
     </div>
