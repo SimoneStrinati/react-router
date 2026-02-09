@@ -3,8 +3,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import HomePage from "./pages/Homepage";
 import ChiSiamo from './pages/ChiSiamo';
-import Prodotti from './pages/Prodotti';
+import Prodotti from './pages/ProductList';
 import DefaultLayout from './layouts/DefautlLayout';
+import ProductDetailList from './pages/ProductDetailPage';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
             <Route path='/' Component={HomePage} />
             <Route path='/prodotti' Component={Prodotti} />
             <Route path='/chisiamo' Component={ChiSiamo} />
+            <Route path="/dettaglio" Component={ProductDetailList} />
           </Route>
         </Routes>
       </BrowserRouter>
