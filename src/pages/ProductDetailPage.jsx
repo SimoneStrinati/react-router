@@ -20,6 +20,7 @@ function ProductDetailPage() {
             setDetails(res.data);
         }).catch(error => {
             console.log("C'è un problema", error.message);
+            navigate("/prodotti");
         })
     };
 
@@ -35,14 +36,17 @@ function ProductDetailPage() {
             <p>{details.category} </p>
 
 
-             <div className="navigation-buttons">
-                    {/* Bottone Prodotto Precedente */}
-                    <button  onClick={() => navigate(`/prodotti/${currentId - 1}`)}>Vai al prodotto precedente</button>
+            <div className="navigation-buttons">
+                {/* Bottone Prodotto Precedente */}
+                {currentId > 1 && (
+                    <button onClick={() => navigate(`/prodotti/${currentId - 1}`)}>
+                        Vai al prodotto precedente
+                    </button>)}
                     
 
                     {/* Bottone Prodotto Successivo */}
-                    <button onClick={() => navigate(`/prodotti/${currentId + 1}`)}>Vai al prodotto successivo</button>
-                </div>
+                <button onClick={() => navigate(`/prodotti/${currentId + 1}`)}>Vai al prodotto successivo</button>
+            </div>
 
             <Link to={`/prodotti/`} className='link'> Torna alla lista prodotti </Link>
             {/* <Link to={`/prodotti/${parseInt(id) + 1}`} className='link'> Torna al prossimo prodotto </Link> */}
