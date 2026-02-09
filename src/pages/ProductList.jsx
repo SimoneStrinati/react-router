@@ -36,7 +36,8 @@ function Prodotti() {
 
                     <h2> {prodotto.title}</h2>
                     <img className="image" src={prodotto.image} alt="" />
-                    <p className='descriptionProduct'>{prodotto.description}</p>
+                    <p>Prezzo: € {prodotto.price}</p>
+                    <p>{prodotto.category} </p>
                     <Link to={`/prodotti/${prodotto.id}`} className='link'> Vai al dettaglio prodotto </Link>
 
                 </div>

@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #333;
+    color: aliceblue;
+}
+
 .navbar-box {
     background-color: #f1f5f9;
     padding: 1rem;
@@ -22,7 +27,7 @@
 }
 
 .link {
-    color: #0066cc;
+    color: lightskyblue;
     text-decoration: none;
 }
 
