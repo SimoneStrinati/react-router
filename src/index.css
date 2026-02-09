@@ -23,16 +23,16 @@ body {
 
 .navbar-box .link.active {
     color: #00BFFF;
-    text-shadow:  0 0 10px rgba(0, 191, 255, 0.6);
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
 }
 
 .link {
-    color:  #87CEFA;
+    color: #87CEFA;
     text-decoration: none;
 }
 
 .link:hover {
-    color:  #FFFFFF;
+    color: #FFFFFF;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
@@ -70,4 +70,16 @@ h2 {
 
 .card p {
     padding: 0.5rem;
+}
+
+
+.navigation-buttons {
+    display: flex;
+    margin: 1rem 8rem;
+    gap: 1rem;
+}
+
+.navigation-buttons:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }

@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function ProductDetailPage() {
 
     const { id } = useParams();
     const [details, setDetails] = useState({});
+    const navigate = useNavigate();
+
+    const currentId = parseInt(id);
 
 
     const apiUrl = `https://fakestoreapi.com/products/${id}`;
@@ -31,8 +34,18 @@ function ProductDetailPage() {
             <p>Prezzo: € {details.price}</p>
             <p>{details.category} </p>
 
+
+             <div className="navigation-buttons">
+                    {/* Bottone Prodotto Precedente */}
+                    <button  onClick={() => navigate(`/prodotti/${currentId - 1}`)}>Vai al prodotto precedente</button>
+                    
+
+                    {/* Bottone Prodotto Successivo */}
+                    <button onClick={() => navigate(`/prodotti/${currentId + 1}`)}>Vai al prodotto successivo</button>
+                </div>
+
             <Link to={`/prodotti/`} className='link'> Torna alla lista prodotti </Link>
-            <Link to={`/prodotti/${parseInt(id) + 1}`} className='link'> Torna al prossimo prodotto </Link>
+            {/* <Link to={`/prodotti/${parseInt(id) + 1}`} className='link'> Torna al prossimo prodotto </Link> */}
         </div>
 
     </div>
