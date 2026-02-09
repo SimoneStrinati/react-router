@@ -5,7 +5,7 @@ import HomePage from "./pages/Homepage";
 import ChiSiamo from './pages/ChiSiamo';
 import Prodotti from './pages/ProductList';
 import DefaultLayout from './layouts/DefautlLayout';
-import ProductDetailList from './pages/ProductDetailPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
             <Route path='/' Component={HomePage} />
             <Route path='/prodotti' Component={Prodotti} />
             <Route path='/chisiamo' Component={ChiSiamo} />
-            <Route path="/dettaglio" Component={ProductDetailList} />
+            <Route path="/prodotti/:id" Component={ProductDetailPage} />
           </Route>
         </Routes>
       </BrowserRouter>
