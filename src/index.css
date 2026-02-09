@@ -10,7 +10,7 @@ body {
 }
 
 .navbar-box {
-    background-color: #f1f5f9;
+    background-color: #2a2f33;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -22,17 +22,18 @@ body {
 }
 
 .navbar-box .link.active {
-    color: #003366;
-    text-shadow: 0 0 6px rgba(0, 102, 204, 0.8);
+    color: #00BFFF;
+    text-shadow:  0 0 10px rgba(0, 191, 255, 0.6);
 }
 
 .link {
-    color: lightskyblue;
+    color:  #87CEFA;
     text-decoration: none;
 }
 
 .link:hover {
-    color: #003366;
+    color:  #FFFFFF;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
 h2 {

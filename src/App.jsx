@@ -17,12 +17,14 @@ function App() {
             <Route path='/' Component={HomePage} />
             <Route path='/prodotti' Component={Prodotti} />
             <Route path='/chisiamo' Component={ChiSiamo} />
-            <Route path="/prodotti/:id" Component={ProductDetailPage} />
+            <Route path="/prodotti/:id" Component={ProductDetailPage} /> 
           </Route>
         </Routes>
       </BrowserRouter>
     </>
   )
 }
+
+//:id è un nome che ho dato io e deve essere uguale a quello di useParams
 
 export default App
